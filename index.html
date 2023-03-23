@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zakat Detection App</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Zakat Detection App</h1>
+    <form>
+      <label for="income">Total Income:</label>
+      <input type="number" id="income" name="income" required />
+      <br />
+      <label for="savings">Total Savings:</label>
+      <input type="number" id="savings" name="savings" required />
+      <br />
+      <button type="button" id="calculate-btn" onclick="calculateZakat()">
+        Calculate Zakat
+      </button>
+    </form>
+    <div id="output"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
