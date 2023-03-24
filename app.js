@@ -1,16 +1,19 @@
 const calculateZakat = () => {
   const income = document.getElementById('income').value;
-  console.log('🚀 ~ file: app.js:3 ~ calculateZakat ~ income', income);
-  const savings = document.getElementById('savings').value;
+  if (income > 0) {
+    const debt = document.getElementById('debt').value;
 
-  const zakat = (2.5 / 100) * (income - savings);
+    const zakat = (2.5 / 100) * (income - debt);
 
-  const output = document.getElementById('output');
-  console.log('🚀 ~ file: app.js:8 ~ calculateZakat ~ output', output);
-  output.innerHTML = `Your Zakat is: ${zakat}`;
-  output.style.display = 'block';
+    const output = document.getElementById('output');
+    output.innerHTML = `Your Zakat is: ${zakat}`;
+    output.style.display = 'block';
+  } else {
+    output.style.display = 'none';
+  }
 };
 
-// document
-//   .getElementById('calculate-btn')
-//   .addEventListener('click', calculateZakat());
+const getYear = () => {
+  let year = document.getElementById('getYear');
+  year.innerText = new Date().getFullYear();
+};
