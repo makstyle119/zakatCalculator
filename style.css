@@ -1,3 +1,8 @@
+/* Set a default font size for the entire document */
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f1f1f1;
@@ -18,7 +23,8 @@ form {
 
 label {
   display: block;
-  margin-bottom: 10px;
+  margin-top: 10px;
+  /* margin-bottom: 10px; */
 }
 
 input[type='number'] {
@@ -63,4 +69,53 @@ footer {
   bottom: 0;
   width: 100%;
   padding: 10px 0;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* Media queries for small screens */
+@media only screen and (max-width: 600px) {
+  /* Reduce the font size of the body */
+  body {
+    font-size: 14px;
+  }
+
+  /* Center the form on small screens */
+  form {
+    margin: 20px auto;
+    max-width: 90%;
+    text-align: center;
+  }
+
+  /* Increase the width of the input fields on small screens */
+  input[type='number'] {
+    width: 90%;
+  }
+
+  /* Make the button full width on small screens */
+  button[type='button'] {
+    width: 90%;
+  }
+
+  /* Reduce the margin of the output div on small screens */
+  #output {
+    margin: 10px auto;
+    max-width: 90%;
+  }
+
+  /* Reduce the font size and padding of the footer on small screens */
+  footer {
+    font-size: 12px;
+    padding: 5px 0;
+  }
 }
